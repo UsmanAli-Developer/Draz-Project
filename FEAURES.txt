@@ -1,0 +1,60 @@
+⭐ Basic (zaroor hone chahiye):
+1️⃣ User Authentication (Login, Signup, Logout)
+👉 Django Auth system ka use karo
+
+2️⃣ Product Listing Page
+👉 all products ko list karo (Home page)
+
+3️⃣ Product Detail Page
+👉 ek product ki details dikhao (photo, description, price, stock)
+
+4️⃣ Shopping Cart
+👉 user apne cart me products add/remove kar sake
+👉 cart ki quantity update kar sake
+
+5️⃣ Checkout Page
+👉 simple checkout form (name, address, phone number)
+👉 order ko save karo database me
+
+6️⃣ Order History
+👉 har user apne orders dekh sakta hai (/my-orders/ page)
+
+7️⃣ Admin Panel (Django Admin)
+👉 products ko CRUD karo (create, read, update, delete)
+👉 orders ko view karo
+
+⭐ Advanced (agar tumhe aur time mile):
+8️⃣ Product Search + Filter
+👉 search bar se products search karo
+👉 category ke hisab se filter karo
+
+9️⃣ Pagination
+👉 product list me pagination lagao
+
+10️⃣ Product Categories
+👉 product ko category ke sath link karo (ex: Electronics, Clothing, Books)
+
+11️⃣ Order Status Update
+👉 admin order ka status change kar sake (pending → shipped → delivered)
+
+12️⃣ Email Notifications
+👉 after order placement, user ko confirmation email bhejna
+
+13️⃣ Payment Integration (Stripe/PayPal)
+👉 online payment accept karna
+
+14️⃣ Mobile Responsive Design
+👉 Bootstrap use karke responsive bana do (job me ye zaroor dekha jata hai!)
+
+⭐ Bonus (bohot strong impact ke liye):
+15️⃣ REST API
+👉 same features ke liye REST API bhi banao (Django REST Framework)
+👉 app ko modern stack compatible bana do
+
+16️⃣ Unit Testing
+👉 tests likho (Django TestCase se) — recruiters ko ye bohot pasand aata hai
+
+17️⃣ Deployment
+👉 project ko live deploy karo (PythonAnywhere / Render / Railway)
+👉 GitHub pe code + README achi likho
+

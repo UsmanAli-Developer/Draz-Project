@@ -1,0 +1,87 @@
+{% extends 'register.html' %}
+{% load socialaccount %}
+{% load static %}
+{% block Register %}
+<div class="container" style="margin-top: 150px; margin-bottom: 150px;">
+    <div class="row">
+         {% if error %}
+        <div class="col-12">
+            <div class="alert alert-danger text-center">{{ error }}</div>
+        </div>
+        {% endif %}
+        <div class="col-md-6 text-center">
+            <h2>Create your Daraz Account</h2>
+        </div>
+        <div class="col-md-6 text-center">
+            <small>Already member? <a href="{% url 'login-page' %}">Login</a> here</small>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 bg-light">
+            <div class="box p-3">
+                <form action="{% url 'signup-page' %}" method="post"  >
+                    {% csrf_token %}
+                    <label class="form-label"><small>Phone Number</small></label>
+                    <input type="text" name="phone" class="form-control" placeholder="Please Enter Your Phone Number..." required>
+
+                    <label class="form-label"><small>SMS Verification</small></label>
+                    <input type="number" name="sms" class="form-control" placeholder="Enter Code..." required>
+
+                    <label class="form-label"><small>Password</small></label>
+                    <div class="pass position-relative">
+                        <input type="password" name="password1" class="form-control" placeholder="Enter Your Password..." id="input" required>
+                        <i class="fa-solid fa-eye-slash" style="cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);" id="toggle-password"></i>
+                    </div>
+
+                    <label class="form-label"><small>Birthday</small></label>
+                    <input type="month" name="birthday" class="form-control">
+                   </div> 
+        </div>
+
+        <div class="col-4 bg-light">
+            <div class="s p-3">
+                <label class="form-label"><small>Full Name</small></label>
+                <input type="text" name="fullname" class="form-control" placeholder="Please Enter Your Name..." required>
+
+                <div class="check d-flex">
+                    <input type="checkbox" class="form-check">
+                    <p class="mt-2 p-1">I'd like to receive exclusive offers and promotions via SMS</p>
+                </div>
+                <div class="tocenter d-flex justify-content-center">
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary p-3 px-5 ">SIGN UP</button>
+                </div>
+                <p class="m-3 text-center">Or Signuup With</p>
+                <div class="buttons text-center d-flex justify-content-around">
+                    <a href="#" class="btn btn-outline-primary px-4">
+                        <i class="fa-brands fa-facebook pe-1"></i>Facebook
+                    </a>
+                    <a href= "#" onclick="openLoginPopup()"  class="btn btn-outline-primary px-4">
+                        <i class="fa-brands fa-google pe-1"></i>Google
+                    </a>
+                </div>
+                </div>
+            </div>
+        
+        </form>
+        <div class="col-2"></div>
+    </div>
+</div>
+<script>
+ function openLoginPopup() {
+    const popup = window.open(
+      "{% provider_login_url 'google' %}",
+      "GoogleLoginWindow",
+      "width=500,height=600,left=300,top=100"
+    );
+
+    const timer = setInterval(() => {
+      if (popup.closed) {
+        clearInterval(timer);
+        window.location.href = "/home/";
+      }
+    }, 500);
+  }
+</script>
+</script>
+<script src="{% static 'Js/login.js' %}"></script>
+{% endblock %}
