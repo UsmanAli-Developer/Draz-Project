@@ -1,7 +1,7 @@
-Django 
-gunicorn
+echo "Django>=4.0
 django-allauth
 requests
 PyJWT
 cryptography
-
+django-tinymce
+gunicorn" > requirements.txt
