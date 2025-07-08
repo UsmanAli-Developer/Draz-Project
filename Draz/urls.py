@@ -38,7 +38,7 @@ urlpatterns = [
     path('search/', views.header, name='header'),  
     path('logout/', views.logout_user, name='logout'),
     path('close-popup/', views.close_popup, name='close-popup'),
-     path('pay/', views.payment_page, name='payment'),
+    path('pay/', views.payment_page, name='payment'),
     path('success/', views.payment_success, name='payment-success'),
     path('cancel/', views.payment_cancel, name='payment-cancel'),
       
