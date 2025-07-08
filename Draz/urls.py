@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    path('', views.home, name='default-home'),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('home/', views.home ,name='home'),
@@ -40,6 +41,8 @@ urlpatterns = [
      path('pay/', views.payment_page, name='payment'),
     path('success/', views.payment_success, name='payment-success'),
     path('cancel/', views.payment_cancel, name='payment-cancel'),
+      
+
 
 
 ]
