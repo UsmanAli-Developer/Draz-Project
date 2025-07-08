@@ -7,3 +7,4 @@ cryptography
 oauthlib
 requests-oauthlib
 django-tinymce
+stripe
