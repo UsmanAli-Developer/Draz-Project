@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.home, name='default-home'),
+    path('', views.home, name='home'),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('home/', views.home ,name='home'),
@@ -34,7 +34,7 @@ urlpatterns = [
     path('cart/', views.view_cart, name='view_cart'),
     path('update-quantity/<int:id>/', views.update_quantity, name='update_quantity'),
     path('remove-from-cart/<int:id>/', views.remove_from_cart, name='remove_from_cart'),
-    path('', views.search_page, name='search'),           
+    path('search/', views.search_page, name='search'),           
     path('search/', views.header, name='header'),  
     path('logout/', views.logout_user, name='logout'),
     path('close-popup/', views.close_popup, name='close-popup'),
