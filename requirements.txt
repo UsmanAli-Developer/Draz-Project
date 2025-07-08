@@ -1,7 +1,9 @@
-echo "Django>=4.0
+echo "Django>=4.0,<5.0
+gunicorn
 django-allauth
 requests
 PyJWT
 cryptography
-django-tinymce
-gunicorn" > requirements.txt
+oauthlib
+requests-oauthlib
+django-tinymce" > requirements.txt
