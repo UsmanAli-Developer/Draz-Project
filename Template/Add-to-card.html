@@ -10,9 +10,6 @@
 </head>
 <style>
    @media (max-width: 768px) {
-   .header{
-     margin-top: 250px;
-   }
    .amp{
     margin-top: 150px;
    }
@@ -23,7 +20,7 @@
 </style>
 <body>
     {% include 'header.html'%}
-    <div class="container header" style="margin-top: 150px;" >
+    <div class="container" style="margin-top: 150px;" >
         <div class="row">
             <div class="col-md-12 hide">
                  <div class="dropdown" id="dropdown"> 
@@ -48,9 +45,9 @@
             </div>  
         </div>
     </div>
-    <div class="container amp">
+    <div class="container amp ">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 ">
       {% for item in cart_items %}
       <div class="box d-md-flex align-items-center justify-content-between border border-dark rounded p-3 my-2">
         <!-- Checkbox -->
