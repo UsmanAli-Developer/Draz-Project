@@ -79,9 +79,9 @@
             <div class="dropdown" id="dropdown"> 
               <small style="cursor: pointer;" class="text-decoration-none dropdown-toggle  text-light  text-uppercase " id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" >{{ user.first_name }}</small> 
               <ul class="dropdown-menu mt-1 " aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">My account</a></li>
-                <li><a class="dropdown-item" href="#">Orders</a></li>
-                <li><a class="dropdown-item" href="#">Tracking</a></li>
+                <li><a class="dropdown-item text-dark" href="#">My account</a></li>
+                <li><a class="dropdown-item text-dark" href="#">Orders</a></li>
+                <li><a class="dropdown-item text-dark" href="#">Tracking</a></li>
                  <li> <a href="{% url 'logout' %}" class="dropdown-item">Logout</a></li>
             </div> 
              {% else %}
