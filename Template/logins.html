@@ -2,15 +2,15 @@
 {% load socialaccount %}
 {% load static %}
 {% block login_content %}
-<div class="container" style="margin-top: 150px;">
+<div class="container cont" >
     <div class="row">
            {% if error %}
-        <div class="col-12">
+        <div class="col-md-12">
             <div class="alert alert-danger text-center">{{ error }}</div>
         </div>
         {% endif %}
         <div class="col-md-2"></div>
-        <div class="col-md-8 d-flex justify-content-between">
+        <div class="col-md-8 d-md-flex justify-content-between">
            <h3>Welcome to Draz ! Please Login</h3> 
 
            <small>New member? <a href="{% url 'signup-page' %}">Register</a> here.</small>
@@ -38,11 +38,11 @@
 
                <p class="m-3 text-center">Or Login With</p>
                 <div class="buttons text-center d-flex justify-content-around ">
-                    <a href="#" class="btn btn-outline-primary px-5">
-                        <i class="fa-brands fa-facebook pe-1"></i>Facebook
+                    <a href="#" class="btn btn-outline-primary   px-md-5">
+                        <i class="fa-brands fa-facebook pe-md-1"></i>Facebook
                     </a>
-                    <a href="#" onclick="openLoginPopup()" class="btn btn-outline-primary px-5">
-                        <i class="fa-brands fa-google pe-1 "></i>Google
+                    <a href="#" onclick="openLoginPopup()" class="btn btn-outline-primary px-md-5">
+                        <i class="fa-brands fa-google pe-md-1 "></i>Google
                     </a>
                 </div>     
         </div>

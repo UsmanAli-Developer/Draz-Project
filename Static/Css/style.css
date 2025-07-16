@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background-color: #ff5c00;
+    color: #fff;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .sidebar.collapsed {
+    width: 60px;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .nav-links li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .sidebar .nav-links li:hover {
+    background-color: #e55300;
+  }
+  
+  .sidebar .nav-links i {
+    margin-right: 16px;
+    min-width: 24px;
+    text-align: center;
+  }
+  
+  .sidebar.collapsed .link-name {
+    display: none;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    padding: 40px;
+    transition: margin-left 0.3s;
+    width: 100%;
+  }
+  
+  .sidebar.collapsed ~ .main-content {
+    margin-left: 60px;
+  }
+  

@@ -22,8 +22,21 @@
   .card:hover{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-</style>
-  
+  .cont{
+    margin-top: 150px;
+  }
+  @media (max-width: 768px) {
+   #hide{
+      display: none;
+   }
+    #cen{
+      display: flex;
+      justify-content: center;
+    }
+    .cont{
+      margin-top: 300px;
+    }
+  }
 </style>
 <body>
 {% include 'header.html' %}
